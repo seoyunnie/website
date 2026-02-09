@@ -1,0 +1,16 @@
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Node.js
+node_modules/
+
+# Vite
+dist/
+
+# TanStack Router
+.tanstack/
+
+# macOS
+**/.DS_Store

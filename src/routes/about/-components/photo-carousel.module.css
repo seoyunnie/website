@@ -1,0 +1,38 @@
+.indicator {
+  width: 25px; /* Mantine UI Default */
+  height: 5px; /* Mantine UI Default */
+  transition: width 250ms ease;
+
+  &[data-active] {
+    width: 50px;
+  }
+}
+
+.photoCard {
+  align-items: flex-start;
+  color: var(--mantine-color-white);
+  display: flex;
+  height: 25rem;
+  padding: calc(var(--mantine-spacing-xl) + var(--mantine-spacing-md));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    height: 35vh;
+  }
+}
+
+.photoName {
+  cursor: default;
+  font-weight: 900;
+}
+
+.photoNativeName {
+  cursor: default;
+  font-weight: 700;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.photoCountryFlag {
+  height: 2.5rem;
+  width: auto;
+}

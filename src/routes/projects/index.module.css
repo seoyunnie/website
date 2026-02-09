@@ -1,0 +1,10 @@
+.background {
+  background-image: radial-gradient(circle, var(--mantine-color-dimmed) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  min-height: var(--page-content-height);
+}
+
+.projectsContainer {
+  padding-bottom: var(--mantine-spacing-xl);
+  padding-top: var(--mantine-spacing-xl);
+}

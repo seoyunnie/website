@@ -1,0 +1,12 @@
+.schoolSeal {
+  max-height: 3.125rem;
+  object-fit: contain;
+}
+
+.schoolLevels {
+  color: var(--mantine-color-dimmed);
+}
+
+.schoolDuration {
+  margin-top: 0.25rem;
+}

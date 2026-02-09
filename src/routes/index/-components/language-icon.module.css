@@ -1,0 +1,9 @@
+.icon {
+  padding: 0.35rem;
+  margin-right: var(--mantine-spacing-md);
+}
+
+.languageUsage {
+  color: var(--mantine-color-dimmed);
+  margin-top: calc(var(--mantine-spacing-xs) / 2);
+}

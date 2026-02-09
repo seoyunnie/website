@@ -1,0 +1,16 @@
+.projectImage {
+  height: 12.5rem;
+}
+
+.projectName {
+  margin-top: var(--mantine-spacing-md);
+}
+
+.projectDescription {
+  color: var(--mantine-color-dimmed);
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.link {
+  margin-top: var(--mantine-spacing-md);
+}

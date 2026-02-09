@@ -1,0 +1,27 @@
+.background {
+  background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/backgrounds/static-background.jpeg);
+  height: var(--page-content-height);
+}
+
+.content {
+  text-align: center;
+}
+
+.statusCode {
+  color: var(--mantine-primary-color-filled);
+  font-size: calc(var(--mantine-h1-font-size) * 5);
+}
+
+.title {
+  color: var(--mantine-color-white);
+}
+
+.description {
+  color: darken(var(--mantine-color-white), 0.25);
+  margin-top: var(--mantine-spacing-lg);
+}
+
+.returnButton {
+  margin-top: var(--mantine-spacing-xl);
+}
