@@ -1,31 +1,30 @@
 import { Button, Center, Container, Text, Title } from "@mantine/core";
 import { IconArrowBack } from "@tabler/icons-react";
-import { Link } from "@tanstack/react-router";
+import { type NotFoundRouteProps, Link } from "@tanstack/react-router";
 
 import styles from "./not-found.module.css";
 
-export function NotFound() {
+export function NotFound(_: NotFoundRouteProps) {
   return (
-    <div className={styles.background}>
-      <Container h="100%">
-        <Center h="100%">
+    <div className={styles.page}>
+      <Container className={styles.inner}>
+        <Center className={styles.wrapper}>
           <div className={styles.content}>
             <Title className={styles.statusCode}>404</Title>
 
-            <div>
-              <Title className={styles.title}>Page Not Found</Title>
-              <Text className={styles.description} size="lg">
-                The page you are looking for does not exist or has been removed.
-              </Text>
-            </div>
+            <Title className={styles.title}>Page Not Found</Title>
+
+            <Text className={styles.description} size="lg">
+              The page you are looking for does not exist or has been removed.
+            </Text>
 
             <Button
               className={styles.returnButton}
-              variant="white"
-              size="md"
-              leftSection={<IconArrowBack />}
               component={Link}
+              leftSection={<IconArrowBack />}
+              size="md"
               to="/"
+              variant="white"
             >
               Return Home
             </Button>

@@ -1,0 +1,6 @@
+# Dependency Resolution
+minimumReleaseAge: 1440
+
+# Build Settings
+allowBuilds:
+  esbuild: true

@@ -1,8 +1,6 @@
 {
   "$schema": "https://www.schemastore.org/tsconfig.json",
 
-  "include": ["src/**/*"],
-
   "compilerOptions": {
     /* Type Checking */
     "noFallthroughCasesInSwitch": true,
@@ -15,7 +13,6 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noUncheckedSideEffectImports": true,
-    "paths": { "@/*": ["./src/*"] },
     "types": ["vite/client"],
 
     /* Emit */
@@ -36,6 +33,10 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
     /* Completeness */
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+
+    "paths": { "#/*": ["./src/*"] }
+  },
+
+  "include": ["src/**/*"]
 }

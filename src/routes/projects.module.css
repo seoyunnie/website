@@ -1,0 +1,8 @@
+.page {
+  min-height: var(--page-content-height);
+}
+
+.projectsSection {
+  padding-bottom: var(--mantine-spacing-xl);
+  padding-top: var(--mantine-spacing-xl);
+}

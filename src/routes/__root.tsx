@@ -1,28 +1,35 @@
 import { AppShell } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
-import { Header } from "@/components/layout/header.tsx";
-import { Navbar } from "@/components/layout/sidebar.tsx";
+import { Header } from "#/components/layout/header.tsx";
+import { Sidebar } from "#/components/layout/sidebar.tsx";
+import { MOBILE_BREAKPOINT } from "#/constants/breakpoints.ts";
+
+export const Route = createRootRoute({ head: () => ({ meta: [{ title: "Seoyunnie" }] }), component: RootComponent });
 
 function RootComponent() {
-  const [isNavbarOpen, { toggle }] = useDisclosure(false);
+  const [isSidebarOpen, { toggle, close }] = useDisclosure(false);
 
   return (
-    <AppShell
-      header={{ height: "var(--header-height)" }}
-      navbar={{ width: "100%", breakpoint: "xs", collapsed: { desktop: true, mobile: !isNavbarOpen } }}
-    >
-      <Header isBurgerOpen={isNavbarOpen} toggleNavbar={toggle} />
-      <Navbar />
+    <>
+      <HeadContent />
 
-      <AppShell.Main>
-        <Outlet />
-        {import.meta.env.DEV && <TanStackRouterDevtools position="bottom-right" />}
-      </AppShell.Main>
-    </AppShell>
+      <AppShell
+        header={{ height: "var(--header-height)" }}
+        navbar={{ width: "100%", breakpoint: MOBILE_BREAKPOINT, collapsed: { desktop: true, mobile: !isSidebarOpen } }}
+        transitionDuration={500}
+      >
+        <Header isBurgerOpen={isSidebarOpen} onToggleSidebar={toggle} />
+        <Sidebar onClose={close} />
+
+        <AppShell.Main>
+          <Outlet />
+
+          {import.meta.env.DEV && <TanStackRouterDevtools position="bottom-right" />}
+        </AppShell.Main>
+      </AppShell>
+    </>
   );
 }
-
-export const Route = createRootRoute({ component: RootComponent });

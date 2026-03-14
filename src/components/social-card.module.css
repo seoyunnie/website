@@ -1,0 +1,8 @@
+.root {
+  border-radius: var(--mantine-radius-default);
+  padding: var(--mantine-spacing-xs);
+
+  @mixin hover {
+    background-color: var(--mantine-color-gray-light-hover);
+  }
+}

@@ -1,26 +1,20 @@
-import { AppShell, UnstyledButton } from "@mantine/core";
-import { Link } from "@tanstack/react-router";
-import type { ComponentPropsWithoutRef } from "react";
+import { AppShell } from "@mantine/core";
 
-import { NAV_ITEMS } from "./nav-items.ts";
+import { NAV_ITEMS } from "#/data/nav-items.ts";
+
+import { NavItem } from "./nav-item.tsx";
+
 import styles from "./sidebar.module.css";
 
-const ACTIVE_LINK_PROPS = { className: styles.activeLink } as const satisfies ComponentPropsWithoutRef<"a">;
-const INACTIVE_LINK_PROPS = { className: styles.link } as const satisfies ComponentPropsWithoutRef<"a">;
+export interface SidebarProps {
+  onClose: () => void;
+}
 
-export function Navbar() {
+export function Sidebar({ onClose }: Readonly<SidebarProps>) {
   return (
-    <AppShell.Navbar className={styles.sidebar}>
+    <AppShell.Navbar className={styles.root}>
       {NAV_ITEMS.map((item) => (
-        <UnstyledButton
-          key={item.label}
-          component={Link}
-          to={item.to}
-          activeProps={ACTIVE_LINK_PROPS}
-          inactiveProps={INACTIVE_LINK_PROPS}
-        >
-          {item.label}
-        </UnstyledButton>
+        <NavItem {...item} key={item.label} onClick={onClose} variant="sidebar" />
       ))}
     </AppShell.Navbar>
   );

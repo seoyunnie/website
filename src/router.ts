@@ -1,8 +1,7 @@
 import { createRouter } from "@tanstack/react-router";
 
-import { NotFound } from "@/components/not-found.tsx";
-
-import { routeTree } from "./routeTree.gen.ts";
+import { NotFound } from "./components/not-found.tsx";
+import { routeTree } from "./route-tree.gen.ts";
 
 export const router = createRouter({
   defaultPreload: "intent",

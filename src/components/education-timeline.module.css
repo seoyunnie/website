@@ -1,0 +1,12 @@
+.seal {
+  max-height: 3.125rem;
+  object-fit: contain;
+}
+
+.educationLevels {
+  color: var(--mantine-color-dimmed);
+}
+
+.attendancePeriod {
+  margin-top: 0.25rem;
+}

@@ -1,0 +1,23 @@
+.coverImage {
+  height: 12.5rem;
+}
+
+.content {
+  height: 100%;
+}
+
+.title {
+  font-size: var(--mantine-h3-font-size);
+  font-weight: var(--mantine-h3-font-weight);
+  line-height: var(--mantine-h3-line-height);
+  margin-top: var(--mantine-spacing-md);
+}
+
+.description {
+  color: var(--mantine-color-dimmed);
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.linkButton {
+  margin-top: var(--mantine-spacing-md);
+}

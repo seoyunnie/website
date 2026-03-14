@@ -1,16 +1,17 @@
 {
+  "files.readonlyInclude": { "**/route-tree.gen.ts": true },
+  "files.watcherExclude": { "**/route-tree.gen.ts": true },
+  "search.exclude": { "**/route-tree.gen.ts": true },
+
   "cssVariables.lookupFiles": ["**/*.css", "node_modules/@mantine/core/styles.css"],
 
   "oxc.configPath": ".oxlintrc.json",
   "oxc.disableNestedConfig": true,
+  "oxc.enable": true,
+  "oxc.fmt.configPath": ".oxfmtrc.json",
   "oxc.tsConfigPath": "tsconfig.json",
-  "oxc.typeAware": true,
-  "oxc.unusedDisableDirectives": "warn",
 
-  "prettier.configPath": ".prettierrc.json",
-  "prettier.ignorePath": ".prettierignore",
-
-  "[css][html][json][jsonc][markdown][typescript][typescriptreact][yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[html][javascript][json][jsonc][markdown][postcss][typescript][typescriptreact][yaml]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   }
 }

@@ -1,0 +1,12 @@
+.iconWrapper {
+  margin-right: var(--mantine-spacing-md);
+}
+
+.icon {
+  object-fit: contain;
+  width: auto;
+}
+
+.sublabel {
+  color: var(--mantine-color-dimmed);
+}

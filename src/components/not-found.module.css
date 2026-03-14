@@ -1,20 +1,31 @@
-.background {
+.page {
   background:
     linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/backgrounds/static-background.jpeg);
   height: var(--page-content-height);
 }
 
+.inner {
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+}
+
 .content {
+  font-family: var(--accent-font);
   text-align: center;
 }
 
 .statusCode {
   color: var(--mantine-primary-color-filled);
+  font-family: inherit;
   font-size: calc(var(--mantine-h1-font-size) * 5);
 }
 
 .title {
   color: var(--mantine-color-white);
+  font-family: inherit;
 }
 
 .description {
@@ -23,5 +34,6 @@
 }
 
 .returnButton {
+  font-family: var(--primary-font);
   margin-top: var(--mantine-spacing-xl);
 }

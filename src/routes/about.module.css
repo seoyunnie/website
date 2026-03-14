@@ -1,0 +1,71 @@
+.sectionText {
+  margin-top: var(--mantine-spacing-md);
+
+  &:first-of-type {
+    margin-top: var(--mantine-spacing-lg);
+  }
+}
+
+.bioSection {
+  background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/backgrounds/static-background.jpeg);
+}
+
+.bioSectionInner {
+  padding-bottom: var(--mantine-spacing-xl);
+  padding-top: var(--mantine-spacing-xl);
+}
+
+.bioContent {
+  color: var(--mantine-color-white);
+  font-family: var(--accent-font);
+}
+
+.bioImageWrapper {
+  height: 100%;
+}
+
+.bioImage {
+  max-height: 50vh;
+
+  @mixin smaller-than $mantine-breakpoint-md {
+    height: 35vh;
+  }
+}
+
+.bioImageCaption {
+  margin-left: var(--mantine-spacing-xs);
+  margin-top: var(--mantine-spacing-xs);
+  opacity: 0.75;
+}
+
+.bioTitle {
+  font-family: inherit;
+}
+
+.travelSection {
+  padding-bottom: var(--mantine-spacing-xl);
+  padding-top: var(--mantine-spacing-xl);
+}
+
+.travelInstagramButton {
+  margin-top: var(--mantine-spacing-xl);
+
+  @mixin smaller-than $mantine-breakpoint-sm {
+    margin-bottom: calc(var(--mantine-spacing-xs) / 2);
+  }
+}
+
+.travelCarouselWrapper {
+  flex-direction: column;
+  height: 100%;
+
+  @mixin smaller-than $mantine-breakpoint-sm {
+    height: 35vh;
+  }
+}
+
+.travelCarousel {
+  flex: 1;
+  max-width: 100%;
+}
