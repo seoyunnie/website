@@ -1,8 +1,8 @@
 .heroSection {
-  --overlay-color: rgba(0, 0, 0, 0.5);
+  --overlay-color: rgb(0 0 0 / 50%);
 
   background:
-    linear-gradient(to right, var(--overlay-color), rgba(0, 0, 0, 0)), url(../assets/backgrounds/hero-image.png);
+    linear-gradient(to right, var(--overlay-color), rgb(0 0 0 / 0%)), url("../assets/backgrounds/hero-image.png");
   background-position: center;
   background-size: cover;
   height: var(--page-content-height);
@@ -11,7 +11,7 @@
   z-index: -1;
 
   @mixin smaller-than $mantine-breakpoint-sm {
-    background: linear-gradient(to bottom, var(--overlay-color)), url(../assets/backgrounds/hero-image.png);
+    background: linear-gradient(to bottom, var(--overlay-color)), url("../assets/backgrounds/hero-image.png");
     background-position: center;
     background-size: cover;
   }

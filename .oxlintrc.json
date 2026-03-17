@@ -1,8 +1,7 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
 
-  "ignorePatterns": ["dist/**", "node_modules/**", "src/route-tree.gen.ts"],
-
+  "ignorePatterns": ["src/route-tree.gen.ts"],
   "options": {
     "reportUnusedDisableDirectives": "warn",
 
@@ -13,10 +12,10 @@
   "env": { "builtin": true, "browser": true, "es2022": true },
 
   "plugins": ["eslint", "typescript", "unicorn", "oxc", "import", "promise"],
-  "jsPlugins": ["eslint-plugin-perfectionist"],
+  "jsPlugins": ["eslint-plugin-perfectionist"], // TODO: Remove before `Initial commit`
   "categories": { "correctness": "error", "suspicious": "warn", "pedantic": "warn", "perf": "warn", "style": "warn" },
   "rules": {
-    "perfectionist/sort-named-imports": ["error", { "type": "natural", "groups": ["type-import", "value-import"] }],
+    "perfectionist/sort-named-imports": ["error", { "type": "natural", "groups": ["type-import", "value-import"] }], // TODO: Remove before `Initial commit`
 
     /* Pedantic */
     "eslint/eqeqeq": ["warn", "always", { "null": "ignore" }],
@@ -105,7 +104,7 @@
     },
 
     {
-      "files": ["**/*.[jt]sx"],
+      "files": ["**/*.tsx"],
 
       "plugins": ["react", "jsx-a11y"],
       "jsPlugins": [
@@ -113,28 +112,7 @@
         { "name": "react-compiler", "specifier": "eslint-plugin-react-hooks" }
       ],
       "rules": {
-        "perfectionist/sort-jsx-props": ["error", { "type": "natural" }],
-
-        /* @tanstack/eslint-plugin-router */
-        "tanstack-router/create-route-property-order": "error",
-        "tanstack-router/route-param-names": "error",
-
-        /* eslint-plugin-react-compiler */
-        "react-compiler/component-hook-factories": "error",
-        "react-compiler/config": "error",
-        "react-compiler/error-boundaries": "error",
-        "react-compiler/gating": "error",
-        "react-compiler/globals": "error",
-        "react-compiler/immutability": "error",
-        "react-compiler/incompatible-library": "error",
-        "react-compiler/preserve-manual-memoization": "error",
-        "react-compiler/purity": "error",
-        "react-compiler/refs": "error",
-        "react-compiler/set-state-in-effect": "error",
-        "react-compiler/set-state-in-render": "error",
-        "react-compiler/static-components": "error",
-        "react-compiler/unsupported-syntax": "error",
-        "react-compiler/use-memo": "error",
+        "perfectionist/sort-jsx-props": ["error", { "type": "natural" }], // TODO: Remove before `Initial commit`
 
         /* Correctness */
         "eslint/no-unused-expressions": ["error", { "enforceForJSX": true }],
@@ -157,7 +135,28 @@
         /* Suspicious */
         "import/no-absolute-path": "off",
         "import/no-unassigned-import": ["warn", { "allow": ["**/*.css"] }],
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+
+        /* @tanstack/eslint-plugin-router */
+        "tanstack-router/create-route-property-order": "error",
+        "tanstack-router/route-param-names": "error",
+
+        /* eslint-plugin-react-compiler */
+        "react-compiler/component-hook-factories": "error",
+        "react-compiler/config": "error",
+        "react-compiler/error-boundaries": "error",
+        "react-compiler/gating": "error",
+        "react-compiler/globals": "error",
+        "react-compiler/immutability": "error",
+        "react-compiler/incompatible-library": "error",
+        "react-compiler/preserve-manual-memoization": "error",
+        "react-compiler/purity": "error",
+        "react-compiler/refs": "error",
+        "react-compiler/set-state-in-effect": "error",
+        "react-compiler/set-state-in-render": "error",
+        "react-compiler/static-components": "error",
+        "react-compiler/unsupported-syntax": "error",
+        "react-compiler/use-memo": "error"
       }
     },
     {
@@ -169,7 +168,7 @@
       }
     },
     {
-      "files": ["src/routes/**/*.[jt]sx"],
+      "files": ["src/routes/**/*.tsx"],
 
       "rules": {
         /* Style */

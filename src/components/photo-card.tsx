@@ -15,7 +15,7 @@ export function PhotoCard({ photo }: Readonly<PhotoCardProps>) {
     <Card
       className={styles.root}
       style={{
-        background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(${photo.image})`,
+        background: `linear-gradient(to bottom, rgb(0 0 0 / 50%), rgb(0 0 0 / 0%), rgb(0 0 0 / 25%)), url(${photo.image})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
